@@ -17,7 +17,7 @@ import { SearchOutlined } from '@ant-design/icons'
 import theme from "../../application/utils/Theme";
 
 const NavigationLayout = () => {
-    const [imageIndex, setImageIndex] = useState(1);
+    const [imageIndex] = useState(1);
 
     const firstNavOptions = [
         {
@@ -119,7 +119,7 @@ const NavigationLayout = () => {
                                 {
                                     secondNavOptions.map((s, index) =>
                                         <>
-                                            <div key={index} className={`side-options ${s?.id == imageIndex ? `active` : ""}`}>
+                                            <div key={index} className={`side-options ${s?.id === imageIndex ? `active` : ""}`}>
                                                 <div>{s.icon} </div>
                                                 <span>{s.displayText}</span>
                                                 <div>{s?.otherIcon}</div>
