@@ -176,20 +176,24 @@ const NavigationLayout = () => {
                         <p className="ptag">See more</p>
                         <CardSection>
                             {
-                                MockData.map((c) => {
+                                [1, 2].map(n => {
                                     return (
-                                        <CardBody>
-                                            <SubCard>
-                                                <Image>
-                                                    <img src={c.image[0].nairaMarleyImage} alt="pics" />
-                                                </Image>
-                                                <div className="small-text">
-                                                    <h4>{c.title}</h4>
-                                                    <p>{c.description}</p>
-                                                </div>
-                                            </SubCard>
-                                        </CardBody>
+                                        MockData.map((c) => {
+                                            return (
+                                                <CardBody>
+                                                    <SubCard backgroundColor={c.background}>
+                                                        <Image>
+                                                            <img src={c.image} alt="pics" />
+                                                        </Image>
+                                                        <div className="small-text">
+                                                            <h4>{c.title}</h4>
+                                                            <p>{c.description}</p>
+                                                        </div>
+                                                    </SubCard>
+                                                </CardBody>
 
+                                            )
+                                        })
                                     )
                                 })
                             }
@@ -201,36 +205,34 @@ const NavigationLayout = () => {
                         <h3>Cheers to the weekend</h3>
                         <p className="ptag">See more</p>
                         <CardSection>
-
                             {
-                                MockData.map((c) => {
+                                [1, 2].map(n => {
                                     return (
-                                        <CardBody>
-                                            <SubCard backgroundColor={theme.blueBackground}>
-                                                <Image>
+                                        MockData.map((c) => {
+                                            return (
+                                                <CardBody>
+                                                    <SubCard backgroundColor={c.background}>
+                                                        <Image>
+                                                            <img src={c.image} alt="pics" />
+                                                        </Image>
+                                                        <div className="small-text">
+                                                            <h4>{c.title}</h4>
+                                                            <p>{c.description}</p>
+                                                        </div>
+                                                    </SubCard>
+                                                </CardBody>
 
-                                                    <img src={c.image[1].ayra} alt="pics" />
-
-                                                </Image>
-
-                                                <div className="small-text">
-                                                    <h4>{c.title}</h4>
-                                                    <p>{c.description}</p>
-                                                </div>
-                                            </SubCard>
-                                        </CardBody>
-
+                                            )
+                                        })
                                     )
                                 })
                             }
-
                         </CardSection>
                     </PaddedSection>
 
                 </Content>
                 <BottonNav>
                     <ul className="flex">
-
                         <li className='list'>
                             <a href="/#">
                                 <span><HomeIcon /></span>
