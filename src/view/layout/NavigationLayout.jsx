@@ -14,7 +14,6 @@ import ArrowForwardIcon from "../components/iconComponent/ArrowForward";
 import { MockData } from '../../infrastructure/MOCK_DATA';
 import { useState } from "react";
 import { SearchOutlined } from '@ant-design/icons'
-import theme from "../../application/utils/Theme";
 
 const NavigationLayout = () => {
     const [imageIndex] = useState(1);
